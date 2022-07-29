@@ -4,9 +4,12 @@ require('dotenv').config()
 const port = process.env.PORT || 8000;
 
 const app = express();
+app.use(express.json())
 
-app.get('/', (req,res) => {
-  res.send('hello world!')
+app.get('/api', (req,res) => {
+  res.send({
+    msg: 'welcome to my api'
+  })
 })
 
 app.listen(port, (err) => {
