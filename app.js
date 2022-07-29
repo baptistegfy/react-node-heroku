@@ -8,7 +8,7 @@ app.use(express.json())
 
 app.get('/api', (req,res) => {
   res.send({
-    msg: 'welcome to my api'
+    msg: `L'api te dis bonjour 👋`
   })
 })
 
